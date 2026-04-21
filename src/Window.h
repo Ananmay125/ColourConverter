@@ -9,6 +9,7 @@ public:
 	void destroyWindow();
 	void swapBuffer();
 	void pollEvents();
+	GLFWwindow* getWindow();
 	bool shouldClose();
 
 private:

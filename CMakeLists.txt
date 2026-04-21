@@ -11,7 +11,6 @@ add_executable (ColourConverter
     "src/Main.cpp"
     "libs/glad/src/glad.c" 
 
-    # ui link
     "libs/imgui/imgui.cpp"
     "libs/imgui/imgui_demo.cpp"
     "libs/imgui/imgui_draw.cpp"
@@ -24,6 +23,8 @@ add_executable (ColourConverter
     
     "src/Window.cpp" 
     "src/Window.h"
+    "src/Interface.h" 
+    "src/Interface.cpp" 
 )
 
 target_include_directories(ColourConverter PRIVATE 

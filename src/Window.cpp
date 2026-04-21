@@ -1,5 +1,7 @@
 #include "Window.h"
 
+// Basic Window Setup
+
 Window::Window(int screenWidth, int screenHeight) {
 
 	glfwInit();
@@ -35,4 +37,8 @@ void Window::pollEvents() {
 void Window::destroyWindow() {
 	glfwDestroyWindow(window);
 	glfwTerminate();
+}
+
+GLFWwindow* Window::getWindow() {
+	return window;
 }
