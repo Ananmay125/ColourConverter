@@ -20,16 +20,19 @@ add_executable (ColourConverter
     "libs/imgui/backends/imgui_impl_glfw.cpp"
     "libs/imgui/backends/imgui_impl_opengl3.cpp"
     "libs/stb_image_write.h"
+    "libs/stb_image.h"
     
     "src/Window.cpp" 
     "src/Window.h"
     "src/Interface.h" 
     "src/Interface.cpp" 
+    "src/defines/defne_stb.cpp"
 )
 
 target_include_directories(ColourConverter PRIVATE 
     libs/glfw/include
     libs/glad/include 
+    libs
     libs/imgui
     libs/imgui/backends
 )
@@ -39,6 +42,13 @@ target_link_libraries(ColourConverter PRIVATE
     opengl32 
 )
 
+add_custom_command(TARGET ColourConverter POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_CURRENT_SOURCE_DIR}/resources"
+    "$<TARGET_FILE_DIR:ColourConverter>/resources"
+)
+
 target_compile_definitions(ColourConverter PRIVATE IMGUI_DEFINE_MATH_OPERATORS)
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/resources/" DESTINATION "resources")
 
 install(TARGETS ColourConverter DESTINATION .)

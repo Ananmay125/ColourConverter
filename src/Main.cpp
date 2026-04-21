@@ -7,6 +7,10 @@ int main() {
 
 	Interface interface;
 	interface.init(window.getWindow());
+
+	GLFWwindow* getWindow = window.getWindow();
+
+	window.setWindowIcon(getWindow, "resources/diem.png");
 	
 	while (!window.shouldClose()) {
 

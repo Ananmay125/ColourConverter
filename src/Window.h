@@ -2,6 +2,8 @@
 #include <glfw/glfw3.h>
 #include <iostream>
 
+#include "stb_image.h"
+
 class Window {
 public:
 
@@ -11,6 +13,8 @@ public:
 	void pollEvents();
 	GLFWwindow* getWindow();
 	bool shouldClose();
+
+	void setWindowIcon(GLFWwindow* window, const char* filePath);
 
 private:
 
