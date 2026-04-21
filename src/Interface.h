@@ -10,8 +10,11 @@ public:
 	void endFrame();
 	void render();
 	void destroyFrame();
+	void Style();
+
+	// UI elements
+	void Text(const char* text);
 
 private:
-
 
 };
