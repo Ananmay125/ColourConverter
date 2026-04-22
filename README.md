@@ -6,9 +6,10 @@ Currently it supports the following formats ->
 - HEX
 - RGBA
 - RGBA (Floating Points)
-- HSV
-**It also contains a colour picker!**
+- HSV <br>
 > More formats would be added in the future
+
+**It also contains a colour picker!**
 
 It's good - someone <br>
 <br>
