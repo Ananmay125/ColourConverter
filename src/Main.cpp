@@ -10,6 +10,11 @@ int main() {
 	interface.init(window.getWindow());
 	interface.Style();
 
+	ColorConverter converter;
+
+	// variables
+	static float color[4] = { 1, 0, 0, 1 };
+
 	window.setWindowIcon(getWindow, "resources/moan.jpg");
 	
 	while (!window.shouldClose()) {
@@ -18,7 +23,10 @@ int main() {
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		interface.startFrame("Colour Converter");
-		interface.Text("yo");
+		ImGui::PushFont(interface.titleFont);
+		ImGui::Text("Colour Converter");
+		ImGui::PopFont();
+		converter.draw();
 		interface.endFrame();
 		interface.render();
 		
