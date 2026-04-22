@@ -11,3 +11,5 @@ Currently it supports the following formats ->
 It's good - someone <br>
 <br>
 <img src="https://file.garden/aeeML3SsJxTPrRct/diemarchive-diem.gif" width="150" height="150">
+
+> The font assets are from others sources and images are for icons.
